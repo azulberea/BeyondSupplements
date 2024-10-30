@@ -1,0 +1,40 @@
+@use "/src/styleUtils/mixins.scss";
+
+.header{
+    @include mixins.flex(flex, row, nowrap, space-between, center);
+    height: auto;
+    width: 100vw;
+    padding: 0rem .625rem 0rem .625rem;
+    background-color: black;
+    color: white;
+}
+
+.logo{
+    @include mixins.flex(flex, column, nowrap, center, flex-start);
+    @include mixins.mq(480px){
+        font-size: 2em;
+    };
+    @include mixins.mq(320px){
+        font-size: 1.5em; //O 10VW
+    };
+}
+
+.menu-icon{
+    display: none;
+    @include mixins.mq(768px){
+        display: block;
+    }
+}
+
+.nav{
+    &-list{
+        @include mixins.flex(flex, row, nowrap, space-between, center);
+        width: 300px;
+        color: red;
+        font-size: 1.25em;
+    }
+    @include mixins.mq(768px){
+        display: none;
+    }
+}
+
