@@ -15,12 +15,12 @@
         font-size: 2em;
     };
     @include mixins.mq(320px){
-        font-size: 1.5em; //O 10VW
+        font-size: 10vw; //O 10VW
     };
 }
 
-.menu-icon{
-    display: none;
+.drawer-menu{
+        display: none;
     @include mixins.mq(768px){
         display: block;
     }

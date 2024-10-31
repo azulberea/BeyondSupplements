@@ -5,8 +5,8 @@
     align-items     : $align;
 }
 
-@mixin mq( $width, $orientation : portrait ){
-    @media screen and (max-width: $width) and (orientation: $orientation) {
+@mixin mq( $width ){
+    @media screen and (max-width: $width) {
         @content;
     }
 }

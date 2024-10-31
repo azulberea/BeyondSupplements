@@ -1,0 +1,39 @@
+@use "/src/styleUtils/mixins.scss";
+
+.drawer-menu__icon{
+    cursor: pointer;
+}
+
+.drawer-menu__nav{
+    @include mixins.flex(flex, column, nowrap, flex-start, center);
+    height: 100vh;
+    width: auto;
+    background-color: pink;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    font-size: 2em;
+    padding: 2rem;
+    @include mixins.mq(480px){
+        font-size: 1.75em;
+    }
+    @include mixins.mq(320px){
+        padding: 1.25rem;
+        font-size: 9vw;
+    }
+}
+
+.drawer-menu__background-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.692);
+    z-index: 50;
+}
+
+.hidden{
+    display: none;
+}
