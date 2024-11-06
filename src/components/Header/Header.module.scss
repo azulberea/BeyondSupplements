@@ -1,21 +1,26 @@
-@use "/src/styleUtils/mixins.scss";
+@use "/src/styles/mixins.scss";
 
 .header{
     @include mixins.flex(flex, row, nowrap, space-between, center);
     height: auto;
     width: 100vw;
-    padding: 0rem .625rem 0rem .625rem;
+    padding: 0rem 1.375rem 0rem .625rem;
     background-color: black;
     color: white;
+    @include mixins.mq(768px){
+        padding: 0rem .625rem 0rem .625rem;
+    }
 }
 
 .logo{
     @include mixins.flex(flex, column, nowrap, center, flex-start);
-    @include mixins.mq(480px){
+    @include mixins.text-hover();
+    font-size: 2.5em;
+    @include mixins.mq(768px){
         font-size: 2em;
     };
     @include mixins.mq(320px){
-        font-size: 10vw; //O 10VW
+        font-size: 1.5em;
     };
 }
 
@@ -27,14 +32,17 @@
 }
 
 .nav{
-    &-list{
-        @include mixins.flex(flex, row, nowrap, space-between, center);
-        width: 300px;
-        color: red;
-        font-size: 1.25em;
-    }
     @include mixins.mq(768px){
         display: none;
+    }
+}
+
+.nav-list{
+    @include mixins.flex(flex, row, nowrap, space-between, center);
+    width: 18.75rem;
+    font-size: 1.25em;
+    &__item{
+        @include mixins.text-hover()
     }
 }
 

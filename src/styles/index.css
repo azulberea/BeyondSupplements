@@ -1,0 +1,22 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "./reset.scss";
+
+body{
+  overflow-x: hidden;
+}
+
+  ::-webkit-scrollbar {
+	width: 10px; /* Ancho de la barra de scroll */
+  }
+  
+  /* Fondo de la barra de scroll */
+  ::-webkit-scrollbar-track {
+	background: #3f3f3f; /* Color del fondo */
+  }
+  
+  /* Color y forma de la barra */
+  ::-webkit-scrollbar-thumb {
+	background-color: #888; /* Color de la barra */
+	border-radius: 10px; /* Bordes redondeados */
+	border: 2px solid #888; /* Bordes */
+  }

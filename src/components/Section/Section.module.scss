@@ -1,0 +1,46 @@
+@use "/src/styles/mixins.scss";
+
+.section{
+    height: auto;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 2em;
+    @include mixins.mq(960px){
+        padding: 1rem;
+    }
+    @include mixins.mq(480px){
+        padding: .5rem;
+    }
+}
+
+.section__title{
+    color: white;
+    font-size: 2em;
+    margin: .625rem 0rem 0rem;
+    text-align: center;
+    @include mixins.mq(768px){
+        font-size: 2em;
+    }
+    @include mixins.mq(480px){
+        font-size: 1.5em;
+    }
+    @include mixins.mq(320px){
+        font-size: 1.25em;
+    }
+}
+
+.section__description{
+    text-align: center;
+    font-size: 1em;
+    margin: 1.25rem 0rem;
+    @include mixins.mq(960px){
+        max-width: 37.5rem;
+    }
+    @include mixins.mq(480px){
+        font-size: .8em;
+    }
+}

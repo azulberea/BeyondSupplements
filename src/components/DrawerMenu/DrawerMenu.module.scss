@@ -1,10 +1,10 @@
-@use "/src/styleUtils/mixins.scss";
+@use "/src/styles/mixins.scss";
 
 .drawer-menu__icon{
     cursor: pointer;
 }
 
-.drawer-menu__nav{
+.nav{
     @include mixins.flex(flex, column, nowrap, flex-start, center);
     height: 100vh;
     width: auto;
@@ -32,6 +32,10 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.692);
     z-index: 50;
+}
+
+.list__item{
+    margin-bottom: 1rem;
 }
 
 .hidden{

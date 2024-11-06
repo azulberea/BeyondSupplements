@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss"
-import DrawerMenu from "../DropdownMenu/DrawerMenu"
+import DrawerMenu from "../DrawerMenu/DrawerMenu"
 
 const Header = () => {
 
@@ -14,9 +14,9 @@ const Header = () => {
         </div>
         <nav className={styles.nav}>
             <ul className={styles['nav-list']}>
-                <a href="products.html"> Productos </a>
-                <a> Carrito </a>
-                <a> Contacto </a>
+                <a className={styles['nav-list__item']} href="products.html"> Productos </a>
+                <a className={styles['nav-list__item']}> Carrito </a>
+                <a className={styles['nav-list__item']}> Contacto </a>
             </ul>
         </nav>
     </header>

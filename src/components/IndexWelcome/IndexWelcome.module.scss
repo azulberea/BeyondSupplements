@@ -1,0 +1,55 @@
+@use "/src/styles/mixins.scss";
+
+.index-welcome{
+    @include mixins.flex(flex, column, nowrap, space-between, center);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/img/249507_arnold-schwarzenegger-mr-olympia-wallpapers-free-desktop_800x500_h.jpg);
+    min-height: 85vh;
+    background-size: cover; 
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    @include mixins.mq(960px){
+        padding: 1rem;
+    }
+    @include mixins.mq(480px){
+        padding: .5rem;
+        background-position: 65%;
+    }
+}
+
+.index-welcome__title{
+    @include mixins.text-animation(slideInLeft);
+    color: #ffffffb0;
+    margin-top: auto;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 12.5rem;
+    @include mixins.mq(1024px){
+        margin-bottom: 9.375rem;
+    }
+    @include mixins.mq(768px){
+        font-size: 2.5em;
+    }
+    @include mixins.mq(480px){
+        font-size: 2em;
+        margin-bottom: 6.25rem;
+    }
+    @include mixins.mq(320px){
+        font-size: 1.5em;
+    }
+}
+
+.index-welcome__text{
+    @include mixins.text-animation(slideInRight);
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.25em;
+    @include mixins.mq(768px){
+        font-size: 1em;
+    }
+    @include mixins.mq(480px){
+        font-size: .8em;
+    }
+}

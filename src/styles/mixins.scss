@@ -1,0 +1,59 @@
+@mixin flex( $dis , $direction , $corte , $just , $align ){
+    display         : $dis;
+    flex-flow       : $direction $corte;
+    justify-content : $just;
+    align-items     : $align;
+}
+
+@mixin mq( $width ){
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+//320px 480px 768px 960px 1024px 1328px
+
+@mixin text-hover($color : rgb(151, 151, 151)){
+    transition: color 0.3s ease;
+        &:hover{
+            color: $color;
+        }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); // Comienza más abajo
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); // Llega a su posición original
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); // Comienza fuera de la pantalla a la izquierda
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); // Llega a su posición original
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); // Comienza fuera de la pantalla a la izquierda
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); // Llega a su posición original
+    }
+}
+
+@mixin text-animation($animation) {
+    opacity: 0;
+    animation: $animation 2s ease forwards;
+}
