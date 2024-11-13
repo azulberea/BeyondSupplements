@@ -1,13 +1,8 @@
 @use "/src/styles/mixins.scss";
 
 .section{
+    @include mixins.flex(flex, column, nowrap, center, center);
     height: auto;
-    background-color: #111111;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    color: white;
     padding: 2em;
     @include mixins.mq(960px){
         padding: 1rem;
@@ -17,8 +12,15 @@
     }
 }
 
+.section--white-bg{
+    background-color: white;
+}
+
+.section--black-bg{
+    background-color: black;
+}
+
 .section__title{
-    color: white;
     font-size: 2em;
     margin: .625rem 0rem 0rem;
     text-align: center;
@@ -31,6 +33,14 @@
     @include mixins.mq(320px){
         font-size: 1.25em;
     }
+}
+
+.text-color--white-bg{
+    color: black;
+}
+
+.text-color--black-bg{
+    color: white;
 }
 
 .section__description{

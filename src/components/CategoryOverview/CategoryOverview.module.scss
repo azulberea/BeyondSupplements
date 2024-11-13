@@ -1,0 +1,10 @@
+@use "/src/styles/mixins.scss";
+
+.category-overview{
+    @include mixins.flex(flex, row, wrap, center, center);
+    width: auto;
+    gap: 1.5625rem;
+    @include mixins.mq(960px){
+        display: none;
+    }
+}
