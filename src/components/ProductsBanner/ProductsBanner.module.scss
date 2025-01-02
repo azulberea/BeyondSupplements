@@ -1,0 +1,31 @@
+@use "/src/styles/mixins.scss";
+
+.products-main{
+    margin: 3rem 0rem;
+    padding: 15rem 0rem;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/img/suplementos/cab1c875cd49-colageno-t.webp");
+    background-size: cover; /* Ajusta el tamaño para cubrir todo el div */
+    background-position: center 90%;
+    @include mixins.mq(768px){
+        padding: 8rem 0rem;
+    }
+    @include mixins.mq(480px){
+        padding: 5rem 0rem;
+    }
+}
+
+.products-main__title{
+    @include mixins.text-animation(slideInLeft);
+    color: white;
+    font-size: 3.5em;
+    @include mixins.mq(768px){
+        font-size: 2.5em;
+    }
+    @include mixins.mq(480px){
+        font-size: 2em;
+    }
+    @include mixins.mq(320px){
+        font-size: 1.5em;
+    }
+}

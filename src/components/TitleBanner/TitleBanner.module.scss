@@ -1,0 +1,14 @@
+@use "/src/styles/mixins.scss";
+
+.banner{
+ @include mixins.flex(flex, row, nowrap, center, center);    
+  width: 100%;
+  background-color: black;
+  height: auto;
+}
+
+.banner__title{
+    padding: 50px;
+    font-size: 3.5em;
+    color: white;
+}

@@ -1,8 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import "./reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
 body{
   overflow-x: hidden;
+  font-family: "Geist", sans-serif;
 }
 
   ::-webkit-scrollbar {

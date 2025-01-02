@@ -1,0 +1,6 @@
+@use "/src/styles/mixins.scss";
+
+.container{
+    @include mixins.flex(flex, row, nowrap, space-between, flex-start);
+    background-color: black;
+}

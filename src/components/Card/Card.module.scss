@@ -1,0 +1,69 @@
+@use "/src/styles/mixins.scss";
+
+.card{
+    width: 232px;
+    height: 320px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.card__img{
+    background-color: #1b1b1d;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+.card__img:hover{
+    .card__details-button{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.card__details-button{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+    cursor: pointer;
+}
+
+.card__price{
+    margin: 0;
+}
+
+// .card--margins{
+//     margin: 0px 40px 40px 40px;
+//   }
+
+  .card__button{
+    background-color: #3f3f3f;
+    color: white !important;
+    width: 200px;
+    cursor: pointer;
+}
+
+.counter{
+    display: flex;
+}
+
+.counter__input{
+    width: 140px;
+    border: 1px solid rgb(160, 160, 160);
+    outline: none;
+}
+
+.counter__button{
+    width: 30px;
+    height: 30px;
+}

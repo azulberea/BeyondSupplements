@@ -22,7 +22,7 @@
 
 .section__title{
     font-size: 2em;
-    margin: .625rem 0rem 0rem;
+    margin: .625rem 0rem 1.25rem;
     text-align: center;
     @include mixins.mq(768px){
         font-size: 2em;
@@ -46,11 +46,15 @@
 .section__description{
     text-align: center;
     font-size: 1em;
-    margin: 1.25rem 0rem;
+    margin: 0rem 0rem 1.25rem;
     @include mixins.mq(960px){
         max-width: 37.5rem;
     }
     @include mixins.mq(480px){
         font-size: .8em;
     }
+}
+
+.hidden{
+    display: none;
 }

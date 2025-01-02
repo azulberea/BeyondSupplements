@@ -1,0 +1,24 @@
+@use "/src/styles/mixins.scss";
+
+.inspiration-banner{
+    @include mixins.flex(flex, column, nowrap, end, center);
+    background: url(./public/img/t-arnold-schwarzenegger-pumping-iron-ss.jpg);
+    background-size: cover; 
+    background-position: top center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 31.25rem;
+    width: 100%;
+    @include mixins.mq(960px){
+        height: 25rem;
+    }
+}
+
+.inspiration-banner__quote{
+    width: 100%;
+    color: white;
+    align-self: end;
+    margin: 0;
+    background-color: rgb(0 0 0 / 64%);
+    font-style: italic;
+}

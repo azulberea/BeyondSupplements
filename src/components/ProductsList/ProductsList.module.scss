@@ -1,0 +1,8 @@
+@use "/src/styles/mixins.scss";
+
+.products-list{
+    @include mixins.flex(flex, row, wrap, space-between, center);
+    margin: 3rem 10rem;
+    width: fit-content;
+    gap: 50px;
+}

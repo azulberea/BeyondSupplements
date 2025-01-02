@@ -1,5 +1,6 @@
 import styles from "./Header.module.scss"
 import DrawerMenu from "../DrawerMenu/DrawerMenu"
+import { Link } from "react-router-dom"
 
 const Header = () => {
 
@@ -14,7 +15,7 @@ const Header = () => {
         </div>
         <nav className={styles.nav}>
             <ul className={styles['nav-list']}>
-                <a className={styles['nav-list__item']} href="products.html"> Productos </a>
+                <Link to={'/products'} className={styles['nav-list__item']}> Productos </Link>
                 <a className={styles['nav-list__item']}> Carrito </a>
                 <a className={styles['nav-list__item']}> Contacto </a>
             </ul>
